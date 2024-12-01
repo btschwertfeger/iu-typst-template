@@ -1,0 +1,57 @@
+# Template for IU University Case Studies
+#
+# Copyright (c) 2024 Benjamin Thomas Schwertfeger
+# https://github.com/btschwertfeger
+#
+# This template is licensed for use under MIT License.
+#
+# Please do not remove or modify this copyright notice.
+# -----------------------------------------------------------------------------
+#
+# This file contains the references in the Hayagriva format.
+# (see https://github.com/typst/hayagriva/blob/main/docs/file-format.md)
+
+git:
+  type: repository
+  title: Git
+  organization: Software Freedom Conservancy, Inc.
+  author:
+    - Torvalds, Linus
+    - Hamano, Junio
+    - contributors
+  url: https://git-scm.com/doc
+  note: "accessed: October 12, 2024"
+
+gitbook:
+  type: book
+  title: Pro Git 2nd Edition
+  date: 2014
+  publisher: Apress
+  author:
+    - Chacon, Scot
+    - Straub, Ben
+    - contributors
+  url: https://git-scm.com/book/de/v2
+  note: "accessed: October 12, 2024"
+
+gitflow:
+  type: web
+  title: Git-flow Workflow
+  url: https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow
+  author: Atlassian Corporation
+  note: "accessed: November 20, 2024"
+
+dogfood:
+  type: article
+  title: Eating Your Own Dog Food
+  author: Harrison, W.
+  serial-number:
+    doi: 10.1109/MS.2006.72
+  page-range: 5-7
+  issn: 1937-4194
+  date: 2006
+  parent:
+    type: periodical
+    volume: 23
+    issue: 03
+  journal: IEEE Software

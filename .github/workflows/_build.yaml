@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2024 Benjamin Thomas Schwertfeger
+# GitHub: https://github.com/btschwertfeger
+#
+# Template workflow to build the project for a specific os
+# and Python version.
+#
+
+name: Build
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Install fonts
+        run: |
+          sudo apt update
+          # Preconfigure acceptance of the EULA
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          # Install the fonts
+          sudo apt install ttf-mscorefonts-installer
+          sudo fc-cache -f
+          fc-match Arial
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+      - name: Build
+        run: typst compile main.typ main.pdf
