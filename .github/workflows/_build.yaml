@@ -32,6 +32,6 @@ jobs:
           sudo fc-cache -f
           fc-match Arial
       - name: Setup Typst
-        uses: typst-community/setup-typst@v3
+        uses: typst-community/setup-typst@v4
       - name: Build
         run: typst compile main.typ main.pdf
