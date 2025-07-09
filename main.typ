@@ -1,14 +1,27 @@
-// Template for IU University Case Studies
+// Template for the IU University of Applied Sciences case studies and written
+// assignments.
 //
 // Copyright (c) 2024 Benjamin Thomas Schwertfeger
 // https://github.com/btschwertfeger
 //
-// This template is licensed for use under MIT License.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-// Please do not remove or modify this copyright notice.
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
 // -----------------------------------------------------------------------------
 //
 // NOTE: Compile using typst>=v0.12.0
+//
+// NOTE: The IU University of Applied Sciences requires the Arial font for all
+//       documents. This font must be downloaded and installed on your system.
+//       Custom font paths can be used like:
+//       $ typst c main.typ --font-path /home/<username>/.local/share/fonts/
 //
 // -----------------------------------------------------------------------------
 
@@ -88,11 +101,11 @@
   #par(leading: 1em,[
   Author: Max Mustermann \
   Matriculation no.: IUxxxxxx
-
+  \
   Study: Master of Science, _Study-name_ \
   Course: _Course-name_ (_course-id_) \
   Tutor: Prof. Dr. _Monika Mustermann_ \
-
+  \
   Date: #today
   ])
 ]
@@ -223,6 +236,20 @@ Show you skills and knowledge by adding code listings to your document:
 The expected outcomes section is where you outline what you expect to achieve
 or learn from your research or analysis. This is where you describe the goals
 of your project and what you hope to accomplish by the end of it.
+
+#pagebreak()
+
+#let appendix(body) = {
+  set heading(numbering: "A.1", supplement: [Appendix])
+  counter(heading).update(0)
+  body
+}
+
+#show: appendix
+
+= Appendix
+
+Here goes the additional information.
 
 #pagebreak()
 
