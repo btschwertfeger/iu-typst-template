@@ -93,8 +93,7 @@
 #align(horizon + left)[
   #par(leading: 0.5em, [
     #text(size: 24pt, [
-      Case Study: \
-      The black sheep \
+      Case Study: The black sheep \
       #text(size: 10pt)[_IU International University of Applied Sciences_]
     ])
   ])
@@ -132,6 +131,25 @@
 
 #pagebreak()
 
+/* -------------------------------------------------------------------------- */
+
+#heading(numbering: none, outlined: false)[Abbreviations]
+
+#table(
+  columns: (auto, 1fr),
+  align: (left, left),
+  stroke: none,
+  column-gutter: 1em,
+  row-gutter: 0.5em,
+  [*IaC*], [Infrastructure as Code],
+  [*KPI*], [Key Performance Indicator],
+  [*LDAP*], [Lightweight Directory Access Protocol],
+  [*RBAC*], [Role-Based Access Control],
+  [*VM*], [Virtual Machine],
+  [*VNC*], [Virtual Network Computing],
+)
+
+#pagebreak()
 /* -------------------------------------------------------------------------- */
 
 #set page(numbering: "1")
