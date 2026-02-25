@@ -51,6 +51,10 @@
   spacing: leading + 6pt,
 )
 
+// Define footnote style
+#show footnote.entry: set text(font: "Arial", size: 10pt)
+#show footnote.entry: set par(justify: true)
+
 // Display inline code in a small box that retains the correct baseline.
 #show raw: it => block(
   fill: rgb("#1d2433"),
@@ -227,6 +231,10 @@ Show you skills and knowledge by adding code listings to your document:
   caption: [Listing for demonstrating a YAML file],
 )
 
+== Footnotes
+
+Some sentences can be extended using footnotes #footnote[This can be used to
+pack even more information].
 #pagebreak()
 
 /* -------------------------------------------------------------------------- */
