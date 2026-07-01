@@ -4,5 +4,6 @@ updates:
     directory: /
     schedule:
       interval: monthly
-    reviewers:
-      - btschwertfeger
+    groups:
+      github-actions:
+        dependency-type: production
