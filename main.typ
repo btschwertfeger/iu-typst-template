@@ -125,19 +125,21 @@
 
 /* -------------------------------------------------------------------------- */
 
-#outline(title: "Figures", target: figure.where(kind: image))
+#heading(numbering: none, outlined: true)[Figures]
+#outline(title: none, target: figure.where(kind: image))
 
 #pagebreak()
 
 /* -------------------------------------------------------------------------- */
 
-#outline(title: "Listings", target: figure.where(kind: raw))
+#heading(numbering: none, outlined: true)[Listings]
+#outline(title: none, target: figure.where(kind: raw))
 
 #pagebreak()
 
 /* -------------------------------------------------------------------------- */
 
-#heading(numbering: none, outlined: false)[Abbreviations]
+#heading(numbering: none, outlined: true)[Abbreviations]
 
 #table(
   columns: (auto, 1fr),
